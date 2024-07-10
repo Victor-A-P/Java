@@ -1,0 +1,12 @@
+[
+  {
+    "title": "A New Hope",
+    "episode_id": 4,
+    "release_date": "1977-05-25"
+  },
+  {
+    "title": "Attack of the Clones",
+    "episode_id": 2,
+    "release_date": "2002-05-16"
+  }
+]

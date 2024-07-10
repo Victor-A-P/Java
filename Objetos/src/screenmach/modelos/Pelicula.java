@@ -4,7 +4,7 @@ import screenmach.calculos.CalculadorTiempo;
 import screenmach.calculos.Clasificacion;
 
 public class Pelicula extends Titulo implements Clasificacion {
-                        //extends sirve para indicar que hay una herencia desde titulo
+                        // extends sirve para indicar que hay una herencia desde titulo
                         // y hereda los atributos de titulo
                         // !!! Es IMPORTANTE destacar que no es posible multiple herencia,
                         // Para ello es necesario hacer un truckutru y hacer una jerarquia
@@ -12,6 +12,11 @@ public class Pelicula extends Titulo implements Clasificacion {
                         // y de esta manera el hijo hereda al padre y al abuelo
 
     private String director;
+
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
+
 
     public String getDirector() {
         return director;
@@ -24,5 +29,10 @@ public class Pelicula extends Titulo implements Clasificacion {
     @Override
     public int getClasificacion() {
         return (int) (rate()/2);
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula: " + this.getNombre() + " (" + getFechaDeLanzamiento() + ")";
     }
 }

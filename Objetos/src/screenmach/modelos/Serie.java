@@ -5,6 +5,11 @@ public class Serie  extends Titulo{
     int episodiosPorTemporada;
     int minutosPorEpisodios;
 
+    public Serie(String nombre, int fechaDeLanzamiento,int temporada) {
+        super(nombre, fechaDeLanzamiento);
+        this.setTemporada(temporada);
+    }
+
     @Override
     // Las anotaciones se identifican por el uso de '@'
     //@Deprecated indica que el metodo o clase esta obsoleto y no debe de usarse
@@ -40,5 +45,8 @@ public class Serie  extends Titulo{
         this.minutosPorEpisodios = minutosPorEpisodios;
     }
 
+    public String toString() {
+        return "Serie: " + this.getNombre() + " con " + this.getTemporada() + " temporadas, lanzada en (" + getFechaDeLanzamiento() + ")";
+    }
 
 }
